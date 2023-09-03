@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="_css/style.css">
+<link rel="stylesheet" href="_css/bootstrap.min.css">
+<script src="_js/misc.js"></script>
+<script src="_js/main.js"></script>
+<title>MOTUS GAME</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1 class="title text-center p-4">M<span class="letterO">O</span>TUS</h1>
+    </div>
+    <div class="row">
+        <table id="board" class="d-flex justify-content-center">
+            <tbody>
+                <tr class="letter-row">
+                    <td class="letter-column not-present"></td>
+                    <td class="letter-column not-present"></td>
+                    <td class="letter-column not-present"></td>
+                    <td class="letter-column not-present"></td>
+                    <td class="letter-column not-present"></td>
+                    <td class="letter-column not-present"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <form class="guess-form d-flex justify-content-center">
+            <input type="text" class="p-2 m-1" id="guess-input" maxlength="6" placeholder="mot de 6 lettres">
+            <button class="btn btn-primary p-2 m-1" id="guess-button" type="submit">Devine</button>
+        </form>
+    </div>
+    <div class="row pt-5">
+        <div class="msg text-center"></div>
+    </div>
+</div>
+</body>
+</html>

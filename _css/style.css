@@ -1,0 +1,43 @@
+.container {
+    max-width: 600px;
+    margin: 115px;
+    padding: 80px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    background-color: #c4e3ff;
+}
+
+.title{
+    color: white;
+    font-size: 3.5rem; 
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3); 
+    transform: perspective(100px) rotateX(15deg);
+}
+.letterO{
+    color: yellow;  
+}
+#board {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.letter-column {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+
+.not-present{
+    background-color: #007BFF;
+}
+
+.wellplaced {
+    background-color: orange;
+}
+
+.misplaced {
+    background-color: yellow;
+}
