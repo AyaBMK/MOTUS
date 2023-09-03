@@ -16,7 +16,30 @@ let message = document.querySelector('.msg');
 
 let currentGuess = guessInput.value; 
 
+function getRandomWord(){
+    return WORDLIST[Math.floor(Math.random() * WORDLIST.length)];
+    
+}
 
+function firstLetter(){
+    
+    randomWord = getRandomWord();
+    letterColumn[0].textContent = randomWord[0];
+
+}
+
+
+function main(){
+    sayHello();
+
+    getRandomWord();
+    firstLetter();
+    
+    
+    sayGoodbye();
+}
+    
+main();
 
 }
 );
