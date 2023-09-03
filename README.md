@@ -9,6 +9,9 @@ Cette fonction stocke le résultat de getRandomWord() dans la variable randomWor
 La fonction qui affiche ce que l'utilisateur a deviné (a saisi dans le input).
 La boucle 'while' parcourt chaque lettre de 'currentGuess' et attribue chaque lettre correspondante à chaque élément de 'letterColumn'.
 
+## functions misPlaced() et wellPlaced() :
+Ces fonctions prennent deux paramètres, randomWord et currentGuess, et comparent chaque lettre entre elles à l'intérieur de la boucle while. Si une lettre est mal placée par rapport à 'randomWord', elles mettent à jour les classes CSS des éléments correspondants dans letterColumn. La même logique s'applique à la fonction wellPlaced().
+
 ## function checkPlayerInput() : 
 Cette fonction principale vérifie les saisies du joueur.
 ### Si l'utilisateur devine le mot correctement 
