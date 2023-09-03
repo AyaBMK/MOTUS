@@ -37,6 +37,32 @@ function guessedWord() {
     }
 }
 
+function misPlaced(randomWord, currentGuess) {
+    let i = 0;
+    while (i < currentGuess.length) {
+      if (randomWord[i] !== currentGuess[i] && randomWord.includes(currentGuess[i])) {
+          letterColumn[i].classList.replace('not-present', 'misplaced');
+          letterColumn[i].classList.replace('wellplaced', 'misplaced');
+      } else {
+          letterColumn[i].classList.replace('misplaced', 'not-present');
+      }
+      i++;
+  }
+}
+  
+function wellPlaced(randomWord, currentGuess) {
+    let i = 0;
+    while (i < randomWord.length) {
+      if (randomWord[i] === currentGuess[i]) {
+          letterColumn[i].classList.replace('not-present', 'wellplaced');
+          letterColumn[i].classList.replace('misplaced', 'wellplaced');
+      } else {
+          letterColumn[i].classList.replace('wellplaced', 'not-present');
+      }
+      i++;
+  }
+}
+
 function checkPlayerInput(event) {
     event.preventDefault();
     attempts++;
@@ -47,6 +73,7 @@ function checkPlayerInput(event) {
     if (currentGuess === randomWord) {
       message.textContent = 'Félicitations! Vous avez deviné le mot. ';
       guessedWord();
+      wellPlaced(randomWord, currentGuess);
     } else {
       if (attempts >= MAXATTEMPTS) {
         message.textContent = 'Game over. Le mot était : ' + randomWord + '.';
@@ -54,6 +81,8 @@ function checkPlayerInput(event) {
       } else {
         message.textContent = 'Réessayez, il vous reste ' + (MAXATTEMPTS - attempts)   + ' tentatives ';
         guessedWord();
+        wellPlaced(randomWord, currentGuess);
+        misPlaced(randomWord, currentGuess);
       }
     }
 }
